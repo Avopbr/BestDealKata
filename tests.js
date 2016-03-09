@@ -1,11 +1,13 @@
-QUnit.test("convert the string into an array (split out the quantity and the price);", function(assert) {
-    // assert.equal(bestDeals(), "", []);
-    assert.equal(bestDeals()("1 for R3, 2 for R7, 3 for R10, 5 for R14.50.",["1 for R3, 2 for R7, 3 for R10, 5 for R14.50."]);
+QUnit.test("bestDeals", function(assert) {
+	var result = bestDeals("1 for R3, 2 for R7, 3 for R10, 5 for R14.50.");
+		assert.deepEqual(["1 for R3", "2 for R7", "3 for R10", "5 for R14.50."], result );
     });
+ 
+    
 
-// Qunit.test("take an array as an input and calculate the Price Per Avo for each deal (make sure you use just two decimal points);", function(assert) {
-// 	 assert.equal((""), "", "");
-//      });
+Qunit.test("split out the quantity and the price;", function(assert) {
+	 assert.equal(["1 for R3", "2 for R7", "3 for R10", "5 for R14.50."],);
+     });
 
 // Qunit.test("ind the cheapest deal;", function(assert) {
 //     assert.equal((), "1 for R3", "");
